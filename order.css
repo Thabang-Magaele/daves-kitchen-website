@@ -1,0 +1,234 @@
+/* Order Page Specific Styles */
+.order-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--sa-yellow);
+}
+
+.order-container h2 {
+    text-align: center;
+    color: var(--sa-green);
+    margin-bottom: 0.5rem;
+}
+
+.order-subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--sa-black);
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+fieldset {
+    border: 2px solid var(--sa-blue);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--sa-blue);
+    padding: 0 10px;
+}
+
+.food-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.food-selection:last-child {
+    border-bottom: none;
+}
+
+.food-selection label {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.food-selection input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: var(--sa-red);
+}
+
+.qty {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.qty:disabled {
+    background-color: #eee;
+}
+
+.order-summary {
+    text-align: right;
+    font-size: 1.5rem;
+    color: var(--sa-red);
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+}
+
+.btn-submit {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+/* Success Message */
+.hidden {
+    display: none !important;
+}
+
+#successMessage {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+#successMessage h3 {
+    color: var(--sa-green);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#successMessage p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-secondary {
+    background-color: var(--sa-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Radio Groups & Textareas */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@media (min-width: 600px) {
+    .radio-group {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.radio-group label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1.2);
+    accent-color: var(--sa-red);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+    font-family: inherit;
+}
+
+small {
+    color: #666;
+    font-size: 0.85em;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (order.css)
+   ========================================= */
+
+/* Tablet & Mobile Layouts (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+    .order-container {
+        margin: 1.5rem 5%;
+        padding: 1.5rem 1rem;
+    }
+
+    .order-container h2 {
+        font-size: 1.8rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    .food-selection {
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .food-selection label {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+/* Small Mobile Phones (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+    /* Stack the checkbox item and the quantity input */
+    .food-selection {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .qty {
+        align-self: flex-start;
+        margin-left: 28px; /* Aligns the box nicely under the text, avoiding the checkbox */
+        width: 80px; /* Slightly wider for easier tapping on mobile */
+    }
+
+    .order-summary {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .btn-submit {
+        padding: 15px; /* Larger tap target */
+    }
+}

@@ -1,0 +1,547 @@
+/* Color Palette inspired by South African Flag & Earthy Tones */
+:root {
+    --sa-red: #E03C31;
+    --sa-blue: #001489;
+    --sa-green: #007749;
+    --sa-yellow: #FFB81C;
+    --sa-black: #2b2b2b;
+    --earthy-bg: #f9f4ef;
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--earthy-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+.sa-header {
+    background-color: var(--sa-black);
+    color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo h1 {
+    color: var(--sa-yellow);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--sa-yellow);
+}
+
+.btn-order {
+    background-color: var(--sa-red);
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.btn-order:hover {
+    background-color: #c93026;
+    color: var(--white) !important;
+}
+
+/* Ndebele / SA Flag inspired border */
+.sa-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, var(--sa-red) 25%, var(--sa-blue) 25%, var(--sa-blue) 50%, var(--sa-green) 50%, var(--sa-green) 75%, var(--sa-yellow) 75%);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: var(--sa-yellow);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--sa-green);
+    color: var(--white);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #005a36;
+}
+
+/* Menu Section */
+.menu-highlights {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.menu-highlights h2 {
+    color: var(--sa-green);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid var(--sa-red);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item h3 {
+    color: var(--sa-black);
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--sa-blue);
+    font-size: 1.2rem;
+}
+
+/* Updated Menu List Styling */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.menu-category {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--sa-red);
+    text-align: left;
+}
+
+.menu-category h3 {
+    color: var(--sa-green);
+    border-bottom: 2px solid var(--earthy-bg);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 1.1rem;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list li span:first-child {
+    color: var(--sa-black);
+    font-weight: 500;
+}
+
+.menu-list .price {
+    margin-top: 0; /* overrides previous layout */
+    font-weight: bold;
+    color: var(--sa-blue);
+    font-size: 1.1rem;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+/* Location Section */
+.location-section {
+    background-color: var(--sa-black);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 5%;
+}
+
+.location-section h2 {
+    color: var(--sa-yellow);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #ccc;
+    position: relative;
+}
+
+/* Location Layout and Map Styling */
+.location-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.location-details {
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--sa-yellow);
+}
+
+.location-details p {
+    margin-bottom: 0.5rem;
+}
+
+.map-wrapper {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--sa-green);
+}
+
+/* Make it side-by-side on larger screens */
+@media (min-width: 768px) {
+    .location-container {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .location-details {
+        flex: 1;
+        max-width: 350px;
+    }
+
+    .map-wrapper {
+        flex: 2;
+    }
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 150px;
+    height: 50px;
+    object-fit: fill;
+}
+
+/* Menu Category Images */
+.category-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--earthy-bg);
+}
+
+/* Footer Layout Updates */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+.footer-logo h2 {
+    color: var(--sa-yellow);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.contact-link {
+    color: var(--sa-green);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--sa-yellow);
+}
+
+.copyright-text {
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* About Section Styling */
+.about-section {
+    padding: 5rem 5%;
+    background-color: var(--white);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+    }
+    .about-text, .about-image {
+        flex: 1;
+    }
+}
+
+.about-text h2 {
+    color: var(--sa-red);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.story-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border: 4px solid var(--sa-yellow);
+}
+
+/* Testimonials Section Styling */
+.testimonials-section {
+    padding: 4rem 5%;
+    background-color: var(--sa-black);
+    color: var(--white);
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    color: var(--sa-yellow);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 3px solid var(--sa-green);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.stars {
+    color: var(--sa-yellow);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.testimonial-card h4 {
+    color: var(--sa-red);
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (style.css)
+   ========================================= */
+
+/* Tablet & Mobile Layouts (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Header & Nav */
+    .sa-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1.5rem 5% 2rem 5%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px; /* row gap, column gap */
+    }
+
+    .logo-img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    /* General Section Padding */
+    .menu-highlights, 
+    .about-section, 
+    .testimonials-section, 
+    .location-section {
+        padding: 3rem 5%;
+    }
+
+    /* Typography Scaling */
+    .about-text h2, 
+    .testimonials-section h2, 
+    .menu-highlights h2 {
+        font-size: 2rem;
+    }
+
+    .menu-category h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Mobile Phones (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    /* Fix Grid Layouts for tiny screens */
+    .menu-grid, 
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Fix Menu Items to prevent overlapping prices */
+    .menu-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .menu-list .price {
+        margin-left: 0;
+        align-self: flex-start;
+        color: var(--sa-red); /* Make the price pop more since it's on a new line */
+    }
+
+    /* Testimonial Cards */
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+}

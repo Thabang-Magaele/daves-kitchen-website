@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Dave's Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <header class="sa-header">
+        <div class="logo">
+            <h1>Dave's Kitchen</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="order.html" class="btn-order">Order Now</a></li>
+            </ul>
+        </nav>
+        <div class="sa-border"></div>
+    </header>
+
+    <main class="order-container">
+        <h2>Place Your Order</h2>
+        <p class="order-subtitle">Select your favorite traditional dishes for collection.</p>
+        
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="customerName">Full Name:</label>
+                <input type="text" id="customerName" required placeholder="e.g. Sipho Ndlovu">
+            </div>
+            
+            <div class="form-group">
+                <label for="customerPhone">Phone Number:</label>
+                <input type="tel" id="customerPhone" required placeholder="082 123 4567">
+            </div>
+
+<div class="form-group">
+                <label>Order Method:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="orderMethod" value="collection" checked> 
+                        Collection
+                    </label>
+                    <label>
+                        <input type="radio" name="orderMethod" value="delivery"> 
+                        Delivery <small>(White River: From Bahati to Castor Bridge)</small>
+                    </label>
+                </div>
+            </div>
+
+            <div id="deliveryFields" class="hidden">
+                <div class="form-group">
+                    <label for="deliveryAddress">Delivery Address:</label>
+                    <textarea id="deliveryAddress" rows="3" placeholder="e.g. 12 Kiepersol St, White River..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryInstructions">Delivery Instructions (Optional):</label>
+                    <textarea id="deliveryInstructions" rows="2" placeholder="e.g. Ring the bell at the green gate..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="paymentMethod" value="cash" checked> 
+                        Cash on Delivery/Collection
+                    </label>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="card"> 
+                        Card Machine on Delivery/Collection
+                    </label>
+                </div>
+            </div>            
+
+<fieldset>
+                <legend>Meals</legend>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Beef Steak & Pap/Rice (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Beef Steak & Chips (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Beef Stew & Rice (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Chicken Strips & Chips (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="30"> Spinach & Pap (R30)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Spinach & Rice with Chicken Strips (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>                                                                
+            </fieldset>
+
+            <fieldset>
+                <legend>African Food</legend>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Inhloko + Pap (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Kwerekwere + Pap (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Matfumbu + Pap (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Manqina + Pap (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="50"> Chicken Feet + Pap (R50)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Beef Stew + Pap (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>   
+            </fieldset>
+
+            <fieldset>
+                <legend>Grill Chicken</legend>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="45"> 1/4 Chicken (R45)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="89"> 1/2 Chicken (R89)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> 1/4 Chicken + Chips (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> 1/4 Chicken + Pap (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="169"> Full Chicken (R169)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+            </fieldset>
+                
+            <fieldset>
+                <legend>Ribs, Burgers, Salads</legend>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="75"> Ribs + Pap (R75)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="75"> Ribs + Chips (R75)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Chicken Salad (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="50"> Greek Salad (R50)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Chicken Strips + Rice (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="49"> Chicken Burger (R49)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Chicken Burger + Chips (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>   
+            </fieldset>
+                
+            <fieldset>
+                <legend>Chips & Fish</legend>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="29"> Chips 300g (R29)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="55"> Chips 600g (R55)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="69"> Chips 900g (R69)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="79"> Chips 1200g (R79)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="30"> Fish Small (R30)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="35"> Fish Large (R35)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="25"> Russian (R25)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>   
+            </fieldset>
+                
+            <fieldset>
+                <legend>Extras</legend>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="10"> Pap (R10)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="10"> Gravy (R10)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="20"> Mbhidvo (R20)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="15"> Chakalaka (R15)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="10"> Mayo (R10)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>
+                <div class="food-selection">
+                    <label><input type="checkbox" class="food-item" value="8"> Archar (R8)</label>
+                    <input type="number" class="qty" min="1" max="10" value="1" disabled>
+                </div>   
+            </fieldset>           
+
+            <div class="order-summary">
+                <h3>Total: R <span id="totalPrice">0</span></h3>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">Confirm Order</button>
+        </form>
+
+        <div id="successMessage" class="hidden">
+            <h3>Dankie! Your order has been received.</h3>
+            <p>We will have it ready for collection at 17 William Lynn St soon.</p>
+            <a href="index.html" class="btn-secondary">Return Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="sa-border"></div>
+        <p>&copy; 2026 Thabang Magaele. All Rights Reserved.</p>
+    </footer>
+
+    <script src="order.js"></script>
+</body>
+</html>
