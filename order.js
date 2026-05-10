@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // The exact WhatsApp number provided
-        const whatsappNumber = "27760915274"; 
+        const whatsappNumber = "27824555036"; 
         
         // Encode the message for the URL
         const encodedMessage = encodeURIComponent(whatsappMessage);
